@@ -1,20 +1,7 @@
-# Calculator
+# Tic Tac Toe
 
-Prosta kalkulator z historią działań
-
-## Tech Stack
-
-**CSS:**
-
--   Użycie zmiennych CSS
--   Import fonts: Roboto
--   Elementy rozmieszczone z użyciem Grid ora Flex
--   RWD
-
-**JS:**
-
--   Logika napisana z użyciem klasy
+Prosta gierka kolko i krzyżyk dla dwóch graczy oraz przeciwko AI
 
 ## Demo
 
-Insert gif or link to demo
+https://reddeusdev.github.io/tic-tac-toe/
