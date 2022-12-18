@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<script
+			src="https://kit.fontawesome.com/650fb94032.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			height: 100vh;
+		}
+
+		.board {
+			width: 306px;
+			background-color: rgb(158, 159, 160);
+			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(3, 100px);
+			grid-gap: 3px;
+			display: grid;
+			border: 3px solid rgb(194, 194, 194);
+			cursor: pointer;
+		}
+
+		.box {
+			background-color: rgb(255, 255, 255);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: 3rem;
+			color: rgb(39, 39, 39);
+		}
+
+		.box:hover {
+			background-color: rgb(221, 220, 220);
+		}
+
+		.ui {
+			text-align: center;
+			padding: 10px;
+			margin: 10px;
+			font-size: 2em;
+		}
+
+		.win {
+			margin: 10px;
+			height: 30px;
+		}
+
+		.btr {
+			background-image: rgb(57, 57, 58);
+			border: 1px solid rgb(194, 194, 194);
+			margin: 5px;
+			padding: 15px 30px;
+			text-align: center;
+			text-transform: uppercase;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+
+		.btr:hover {
+			background-color: rgb(97, 97, 99);
+			color: #fff;
+		}
+
+		.grbtr {
+			display: flex;
+		}
+
+		.active {
+			background-color: rgb(97, 97, 99);
+			color: #fff;
+		}
+
+		.result {
+			margin-top: 10px;
+			width: 306px;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.result i {
+			color: rgb(165, 105, 105);
+			font-size: 15px;
+		}
+	</style>
+	<body>
+		<div class="ui">
+			<div class="win"></div>
+			<div>Runda: <span class="tura">0</span></div>
+			<div class="grbtr">
+				<button class="btr player active">Plaver2</button
+				><button class="btr reset">Reset</button
+				><button class="btr ai">AI</button>
+			</div>
+		</div>
+		<div class="board">
+			<div class="box fa-regular" data-row="0" data-column="0"></div>
+			<div class="box fa-regular" data-row="0" data-column="1"></div>
+			<div class="box fa-regular" data-row="0" data-column="2"></div>
+			<div class="box fa-regular" data-row="1" data-column="0"></div>
+			<div class="box fa-regular" data-row="1" data-column="1"></div>
+			<div class="box fa-regular" data-row="1" data-column="2"></div>
+			<div class="box fa-regular" data-row="2" data-column="0"></div>
+			<div class="box fa-regular" data-row="2" data-column="1"></div>
+			<div class="box fa-regular" data-row="2" data-column="2"></div>
+		</div>
+		<div class="result">
+			<div>
+				<i class="fa-regular fa-x"></i> - <span class="resultX">0</span>
+			</div>
+			<div>
+				<i class="fa-regular fa-circle"></i> -
+				<span class="resultO">0</span>
+			</div>
+		</div>
+		<script src="./api.js"></script>
+	</body>
+</html>
